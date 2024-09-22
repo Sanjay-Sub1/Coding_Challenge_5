@@ -72,3 +72,19 @@ console.log(totalPrice);
 
 //checks the function using the order1
 calculateOrderTotal(order1);
+
+//Task 5 Createa a function to complete an order
+function completeOrder(customerName){
+//Checks order if it is in the orders array
+    let orderStatusCheck = orders.find(orderStatusCheck => orderStatusCheck.customerName === customerName);
+//Changes status to complete
+    if (orderStatusCheck){ orderStatusCheck.status  = "Complete";
+    console.log("Order Complete");
+    }
+    else{
+    console.log("Error not found");
+    }
+}
+//Checks to see if the function works
+completeOrder("Jorge");
+console.log(orders);
