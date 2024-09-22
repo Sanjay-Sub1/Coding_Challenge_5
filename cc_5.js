@@ -49,3 +49,26 @@ placeOrder("Jorge",
 
 console.log(inventory);
 console.log(orders);
+
+//Task 4 Calculates the total price of an order
+function calculateOrderTotal(order){
+    let totalPrice = 0;
+//Searches inventory for the item
+    order.items.forEach(orderedItem => {
+
+        let itemInStock = inventory.find(item => item.Name === orderedItem.Name);
+//Calculates the total price by multiplying the quantity in the order by the price of the selected item
+        if (itemInStock) {
+            totalPrice += itemInStock.price *orderedItem.quantity;
+
+        }
+
+
+    }
+);
+//logs the price
+console.log(totalPrice);
+}
+
+//checks the function using the order1
+calculateOrderTotal(order1);
