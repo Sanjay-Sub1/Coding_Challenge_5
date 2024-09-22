@@ -88,3 +88,15 @@ function completeOrder(customerName){
 //Checks to see if the function works
 completeOrder("Jorge");
 console.log(orders);
+
+//Task 6 create a function to check on pending orders
+function checkPendingOrders(){
+    orders.forEach(order => {
+        if (order.status === "Pending"){
+            console.log("Order still pending");
+        }
+        else{
+            console.log("Order is Complete");
+        }
+    })
+}
