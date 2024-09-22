@@ -95,8 +95,5 @@ function checkPendingOrders(){
         if (order.status === "Pending"){
             console.log("Order still pending");
         }
-        else{
-            console.log("Order is Complete");
-        }
     })
 }
